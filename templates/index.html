@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="ru" class="html-main">
+  <head>
+    <meta http-equiv="refresh" content="10">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Managers Score">
+    <meta name="author" content="">
+    <meta name="robots" content="noindex" />
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <title>Managers Score</title>
+    <!-- Bootstrap core CSS -->
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="{{ url_for('static', filename='css/grid.css') }}" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Managers Score</h1>
+      <p class="lead">Orders for last {{ TIME_LIMIT_MAX }} {{ TIME_UNIT }}s: <strong>{{ total_orders }}</strong>, including <strong>{{ total_unconfirmed_orders }}</strong> unconfirmed orders.</p>
+      <hr>
+      <p><img src="data:image/png;base64,{{img|safe}}" class="img-fluid"></p>
+      <hr>
+    </div>
+  </body>
+</html>
