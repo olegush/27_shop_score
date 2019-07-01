@@ -17,9 +17,6 @@ app = Flask(__name__)
 def score():
     return render_template('score.html')
 
-'''
-
-
 load_dotenv()
 
 PG_HOST = os.environ.get('PG_HOST')
@@ -27,7 +24,7 @@ PG_PORT = os.environ.get('PG_PORT')
 PG_DB = os.environ.get('PG_DB')
 PG_USER = os.environ.get('PG_USER')
 PG_PWD = os.environ.get('PG_PWD')
-
+'''
 NOW = datetime.now()
 TIME_UNIT = 'hour'
 TIME_MULT = 60 * 60
