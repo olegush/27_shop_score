@@ -10,7 +10,7 @@ import psycopg2.extras
 import psycopg2
 import matplotlib.pyplot as plt
 
-app = Flask(__name__, static_folder="static")
+app = Flask(__name__)
 load_dotenv()
 
 PG_HOST = os.environ.get('PG_HOST')
