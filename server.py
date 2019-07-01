@@ -11,6 +11,15 @@ import psycopg2
 import matplotlib.pyplot as plt
 
 app = Flask(__name__)
+
+
+@app.route('/')
+def score():
+    return render_template('score.html')
+
+'''
+
+
 load_dotenv()
 
 PG_HOST = os.environ.get('PG_HOST')
@@ -80,10 +89,10 @@ def score():
 @app.route('/robots.txt')
 def robots():
     return send_from_directory(app.static_folder, 'robots.txt')
-
+'''
 
 if __name__ == "__main__":
     load_dotenv()
-    flask_host = os.environ.get('FLASK_HOST')
-    flask_port = int(os.environ.get('FLASK_PORT', 5000))
-    app.run(host=flask_host, port=flask_port)
+    host = os.environ.get('HOST')
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host=host, port=port)
