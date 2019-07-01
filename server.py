@@ -12,11 +12,6 @@ import matplotlib.pyplot as plt
 
 app = Flask(__name__)
 
-
-@app.route('/')
-def score():
-    return render_template('score.html')
-
 load_dotenv()
 
 PG_HOST = os.environ.get('PG_HOST')
@@ -24,7 +19,7 @@ PG_PORT = os.environ.get('PG_PORT')
 PG_DB = os.environ.get('PG_DB')
 PG_USER = os.environ.get('PG_USER')
 PG_PWD = os.environ.get('PG_PWD')
-'''
+
 NOW = datetime.now()
 TIME_UNIT = 'hour'
 TIME_MULT = 60 * 60
@@ -86,7 +81,7 @@ def score():
 @app.route('/robots.txt')
 def robots():
     return send_from_directory(app.static_folder, 'robots.txt')
-'''
+
 
 if __name__ == "__main__":
     load_dotenv()
