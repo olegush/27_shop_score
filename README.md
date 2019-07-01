@@ -1,6 +1,6 @@
 # Shop Score Page
 
-[This site](ttps://dvmn-shop-score.herokuapp.com/)  is a simple service to control order processing of a e-shop. Index page displays total managers activity as pie chart shows how many orders waiting confirmation and how long. Based on Flask with PostgreSQL and Matplotlib for drawing the pie chart.
+[This site](https://dvmn-shop-score.herokuapp.com/)  is a simple service to control order processing. Index page displays total score as pie chart shows how many orders waiting confirmation and how long. Based on Flask with PostgreSQL and Matplotlib for drawing the pie chart.
 
 
 # How to Install
