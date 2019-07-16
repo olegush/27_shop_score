@@ -22,8 +22,12 @@ PORT=5000
 PG_HOST=postgresql_host
 PG_PORT=postgresql_port
 PG_DB=postgresql_db
+PG_TABLE=postgresql_table
 PG_USER=postgresql_user
 PG_PWD=postgresql_password
+TIME_UNIT=hour
+TIME_MULT=3600
+TIME_LIMITS=[[0, 80], [80, 160], [160, 240]]
 ```
 
 FLASK_DEBUG environment variable Flask loads by itself, but for PORT loading we should use python-dotenv package.
