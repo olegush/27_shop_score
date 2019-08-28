@@ -19,9 +19,25 @@
     <div class="container">
       <h1>Managers Score</h1>
       <p class="lead">Orders for last {{ TIME_LIMIT_MAX }} {{ TIME_UNIT }}s: <strong>{{ total_orders }}</strong>, including <strong>{{ total_unconfirmed_orders }}</strong> unconfirmed orders.</p>
-      <hr>
+      <h3>Unconfirmed orders wait:</h3>
       <p><img src="data:image/png;base64,{{img|safe}}" class="img-fluid"></p>
-      <hr>
+      <h3>Last orders:</h3>
+      <table cellpadding="10">
+        <tr>
+          <td>id</td>
+          <td>contact_name</td>
+          <td>created</td>
+          <td>price</td>
+        </tr>
+        {% for order in orders_tail %}
+          <tr>
+            <td>{{ order.id }}</td>
+            <td>{{ order.contact_name }}</td>
+            <td>{{ order.created }}</td>
+            <td>{{ order.price }}</td>
+          </tr>
+        {% endfor %}
+      </table>
     </div>
   </body>
 </html>

@@ -73,6 +73,7 @@ def score():
                 'index.html',
                 TIME_LIMIT_MAX=TIME_LIMITS[-1][-1],
                 TIME_UNIT=TIME_UNIT,
+                orders_tail=orders[:30],
                 total_orders=len(list(orders)),
                 total_unconfirmed_orders=len(unconfirmed_orders),
                 img=get_img(plt))
